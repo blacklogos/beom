@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+
+	
+</head>
+
+<body>
+	<header>
+	  <div class="cover bg-left bg-center-l">
+		  
+		<div class="bg-white-10 center pb6 mw9 bg-left cover" style="background: linear-gradient(to left, transparent, mistyrose),url({{ img }})">
+		  <nav class="bg-white dt w-100 h2-l h1 center tc avenir db ttu"> 
+			  <div class="cf">
+			    <div class="w-20-l w-50 dtc w5 v-mid pl5 pv2">
+				<a href="/"><img src="/assets/img/beo-makeup-logo.png" class="h3-l h2"></a>
+			    </div>
+			<div class="w-20-l w-50 dtc v-mid">
+                <a class="f6 fw5 hover-light-red no-underline black-70 dn dib-ns pv2 ph3" href="#about" >About Me</a> 
+                <a class="f6 fw5 hover-light-red no-underline black-70 dn dib-l pv2 ph3" href="/services" >Services</a> 
+                <a class="f6 fw5 hover-light-red no-underline black-70 dn dib-l pv2 ph3" href="/portfolio" >Portfolio</a>
+                <a class="f6 fw5 hover-light-red no-underline black-70 dn dib-l pv2 ph3" href="/contact" >Contact</a>
+                <a class="f6 fw6 hover-light-red no-underline black-70 dib ml2 pv2 ph3 ba br4" href="tel:+14086675558" >Call Now</a> 
+			</div>
+				  </div>
+		  </nav> 
+
+
+
+{{ content | safe }}
+
+<!--	FOOTER HERE-->
+	
+	<footer class="center cf baskerville pa4 pa5-l bg-black-90 bt b--black-10">
+	  <div class="mb4-l mw9 center cf">
+		  
+		  <div class="white w-30-l w-100 pa2 dib fl pa1">
+				<article class="fl w-100 db w-auto mr4 mr5-l mb4 pr2">
+				<h4 class="f5 f4-l fw6 white">Beo Makeup Artist</h4>
+					<span class="f7 f6-l white">{{ settings.address }}</span>
+			  <a class="f6 fw6 pv3 db white link dim" title="Call SF" href="tel:+14086675558">
+				{{ settings.phone }}
+			  </a>
+			</article>
+			  
+		  </div>
+
+		  <div class="white w-70-l w-100 mw7 pa2 dib fl pa1">
+		  
+			  <input placeholder="Name" type="text" class="w-100 w-50-l dib fl f5 input-reset b--black-20 ba pv3 ph4 border-box mv1">
+			  <input placeholder="Email Address" type="email" class="w-100 w-50-l fl dib f5 input-reset ba b--black-20 pv3 ph4 border-box mv1">
+			  <input placeholder="Your Message" type="text" class="w-100 w-100-l fl dib f5 input-reset ba b--black-20 pv3 ph4 border-box mv1">
+			  
+
+
+			  
+		  	<input type="submit" class="w-100 input-reset dim link dib w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph5 ba b--black-80 mv1 mh0 bg-hover-mid-gray">
+			  
+		  </div>
+		  <div class="w-100-l w-100 pa2 db fl ma1">
+		  
+			  		  <a class="white f4 f3-ns fw6 tl link dim dib pv3 mt2 mb4 mb0-l" href="mailto:{{ settings.email }}" >
+			{{ settings.email }}
+		  </a>
+			  
+		  </div>
+
+		  
+
+
+	  </div>
+
+
+	  <div class="dt dt--fixed w-100" >
+		<div class="dn dtc-ns v-mid">
+		  <p class="ma1 f6 white dib pr3 mb3">
+			Copyright © BeoMakeup 2020
+		  </p>
+		</div>
+		<div class="db dtc-ns black-70 tc tr-ns v-mid">
+		  <a href="{{ settings.fb }}"}} class="link dim dib mr3 white" title="Beo Makeup Artist on Facebook">
+			<svg class="db w2 h2" data-icon="facebook" viewBox="0 0 32 32" fill="currentColor">
+			  <title >facebook icon</title>
+			  <path d="M8 12 L13 12 L13 8 C13 2 17 1 24 2 L24 7 C20 7 19 7 19 10 L19 12 L24 12 L23 18 L19 18 L19 30 L13 30 L13 18 L8 18 z"
+			  ></path>
+			</svg>
+		  </a>
+
+		</div>
+	  </div>
+	  <div class="db dn-ns">
+		<p class="f7 black-70 mt4 tc">
+			Copyright © BeoMakeup 2020
+		</p>
+	  </div>
+	</footer>
+
+<!--	Slider script -->
+	
+	
+	<script src="/assets/js/siema.min.js"></script>
+		<script>
+
+			const mySiema = document.querySelectorAll('.siema');
+			
+			for(const siema of mySiema) {
+				new Siema({ 
+					selector: siema, 
+					duration: 500, 
+					easing: 'ease-out', 
+					loop: true, 
+				}) }; 
+			
+			setInterval(() => mySiema.next(), 3000)
+			
+		    
+			
+		</script>
+	
+
+<!--	end siema slider script-->
+
+</body>
+
+</html>
